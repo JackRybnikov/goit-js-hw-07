@@ -27,3 +27,19 @@ const images = [
     alt: 'Zebras on Zebra',
   },
 ];
+
+const list = document.querySelector(".gallery");
+list.style.listStyle = "none";
+list.style.display = "flex";
+list.style.flexWrap = "wrap";
+list.style.justifyContent = "center";
+list.style.rowGap = "48px";
+list.style.columnGap = "24px";
+list.style.padding = "0";
+list.style.margin = "0";
+
+const markup = images
+.map((image) => `<li class="list-item list" style = "maxWidth: calc((100% - 48px) / 3);"><img src=${image.url} alt=${image.alt} class="image" style="display: block; width: 360px; height: 300px;"></li>`)
+.join("");
+
+list.insertAdjacentHTML("beforeend", markup);
