@@ -12,3 +12,88 @@ body {
   color: #212121;
   line-height: 1.5;
 }
+
+#categories {
+  list-style: none;
+  color: rgba(46, 47, 66, 1);
+}
+
+.item {
+  padding: 16px;
+  width: 320px;
+  background-color: rgb(246, 246, 254);
+  margin-bottom: 24px;
+}
+
+.item > ul {
+  list-style: none;
+  padding-left: 0px;  
+}
+
+.item > ul > li {
+	padding: 8px 0px 8px 16px;
+	border: 1px solid black;
+	border-radius: 4px;
+	margin-bottom: 8px;
+}
+
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 48px;
+  column-gap: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+#name-input {
+  width: 360px;
+  height: 40px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.login-form {
+  max-width: 360px;
+  padding: 24px;
+  color: rgba(46, 47, 66, 1);
+}
+
+.login-form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-form > label > input {
+  height: 40px;
+}
+
+.login-form > button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(78, 117, 255, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.login-form > button:hover,
+.login-form > button:focus {
+  background-color: rgba(108, 140, 255, 1);
+}
+
+.change-color {
+	padding: 8px 16px;
+	border: none;
+	border-radius: 4px;
+	background-color: rgba(78, 117, 255, 1);
+	color: rgba(255, 255, 255, 1);
+}
+
+.change-color:hover,
+.change-color:focus {
+  background-color: rgba(108, 140, 255, 1);
+}

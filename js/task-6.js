@@ -10,34 +10,25 @@ function createBoxes(amount) {
     box.style.width = `${30 + 10*i}px`;
     box.style.height = `${30 + 10*i}px`;
     box.style.backgroundColor = `${getRandomHexColor()}`;
-    boxes.append(box);
+    boxes.appendChild(box);
   }
 };
 
 function destroyBoxes() {
-  const a = boxes.querySelectorAll("div");
-  for (const i of a) {
-    boxes.querySelector("div").remove();
-  }
+  boxes.innerHTML = '';
 };
 
-let counter = 0;
 const form = document.querySelector("#controls");
 const textInput = form.firstElementChild;
 const create = textInput.nextElementSibling;
 const destroy = create.nextElementSibling;
 const boxes = document.querySelector("#boxes");
 
-textInput.addEventListener("input", (event) => {
-  counter = event.currentTarget.value;
-});
-
 create.addEventListener("click", (event) => {
-  if (counter > 0 && counter <= 100) {
+  if (textInput.value > 0 && textInput.value <= 100) {
     destroyBoxes();
-    createBoxes(counter);
+    createBoxes(textInput.value);
     textInput.value = "";
-    counter = 0;
   };
 });
 
