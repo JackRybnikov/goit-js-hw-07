@@ -25,9 +25,10 @@ const destroy = create.nextElementSibling;
 const boxes = document.querySelector("#boxes");
 
 create.addEventListener("click", (event) => {
-  if (textInput.value > 0 && textInput.value <= 100) {
-    destroyBoxes();
-    createBoxes(textInput.value);
+  destroyBoxes();
+  const a = parseInt(textInput.value, 10);
+  if (a > 0 && a <= 100) {
+    createBoxes(a);
     textInput.value = "";
   };
 });

@@ -13,6 +13,8 @@ body {
   line-height: 1.5;
 }
 
+/* Task 1 */
+
 #categories {
   list-style: none;
   color: rgba(46, 47, 66, 1);
@@ -37,6 +39,8 @@ body {
 	margin-bottom: 8px;
 }
 
+/* Task 2 */
+
 .gallery {
   list-style: none;
   display: flex;
@@ -48,6 +52,18 @@ body {
   margin: 0;
 }
 
+.gallery-item {
+	max-width: calc((100% - 48px) / 3);
+}	
+
+.gallery-image {
+	display: block; 
+	width: 360px; 
+	height: 300px;
+}
+
+/* Task 3 */
+
 #name-input {
   width: 360px;
   height: 40px;
@@ -55,6 +71,8 @@ body {
   border-radius: 4px;
   padding: 8px 16px;
 }
+
+/* Task 4 */
 
 .login-form {
   max-width: 360px;
@@ -84,6 +102,8 @@ body {
 .login-form > button:focus {
   background-color: rgba(108, 140, 255, 1);
 }
+
+/* Task 5 */
 
 .change-color {
 	padding: 8px 16px;
